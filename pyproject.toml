@@ -6,7 +6,7 @@ authors = [
     {name = "Haard Shah",email = "haard.shah2004@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.15,<4.0.0"
+requires-python = ">=3.12,<3.13"
 dependencies = [
     "langchain (>=1.4.7,<2.0.0)",
     "langchain-openai (>=1.7.3,<2.0.0)",
@@ -15,7 +15,12 @@ dependencies = [
     "pyyaml (>=6.0.3,<7.0.0)",
     "langchain-groq (>=1.1.3,<2.0.0)",
     "langchain-anthropic (>=1.7.7,<2.0.0)",
-    "langchain-huggingface (>=1.2.3,<2.0.0)"
+    "langchain-huggingface (>=1.2.3,<2.0.0)",
+    "tree-sitter (>=0.26.0,<0.27.0)",
+    "tree-sitter-languages (>=1.10.2,<2.0.0)",
+    "rich (>=15.0.0,<16.0.0)",
+    "onnxruntime (==1.23.2)",
+    "chromadb (>=1.5.9,<2.0.0)"
 ]
 
 [tool.poetry]

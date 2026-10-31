@@ -1,0 +1,31 @@
+Project Structure for **hello** (Version 1.0 – 2026-10-31)
+
+```
+generated_by_ai/
+└── hello/
+    ├── index.html   # Main HTML page – contains the dark‑theme centered form (Name label, input, submit button) as defined in the UI design (task_001).
+    ├── style.css    # CSS stylesheet – implements the dark colour palette, layout (max‑width 400 px, centered), form styling, focus/hover states, and responsive behaviour.
+    └── script.js    # JavaScript – handles form submission, client‑side validation, ARIA live‑region updates for errors/success, and any optional reduced‑motion handling.
+```
+
+**File Responsibilities**
+
+- **index.html**
+  - Provides the semantic markup for the application.
+  - Associates `<label>` with `<input>` for accessibility.
+  - Includes ARIA attributes and a live region for dynamic feedback.
+  - Links to `style.css` and `script.js`.
+
+- **style.css**
+  - Defines the dark‑theme colour palette (primary, background, surface, text, error, success) matching WCAG AA contrast.
+  - Centers the form container, limits width to 400 px, and makes the input full‑width.
+  - Styles the submit button, focus outlines, hover effects, and error states.
+  - Contains media queries for responsive layout and respects `prefers-reduced‑motion`.
+
+- **script.js**
+  - Attaches event listeners to the form.
+  - Performs client‑side validation (e.g., non‑empty name).
+  - Updates the ARIA live region with error or success messages.
+  - Prevents default submission for demo purposes and logs the input.
+
+All files are placed directly under `generated_by_ai/hello` as required; no extra directories or files are introduced.

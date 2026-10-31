@@ -1,0 +1,127 @@
+/*
+  Dark theme stylesheet for the Hello project.
+  - Background: #121212 (very dark gray)
+  - Primary text: #e0e0e0 (light gray)
+  - Accent color: #bb86fc (soft purple) used for focus/hover states.
+  - The form is centered both vertically and horizontally using Flexbox.
+  - Inputs and button have comfortable padding, rounded corners, and subtle hover/focus effects.
+  - Typography uses a system‑stack font for good readability.
+*/
+
+/* Reset a few defaults for consistency */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body – dark background and centered layout */
+body {
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Form container – optional max‑width for readability */
+form {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Headings inside the form */
+form h1,
+form h2,
+form h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Labels */
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+/* Input, textarea, select – shared styling */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #bb86fc;
+  background-color: #353535;
+}
+
+/* Button – primary action */
+form button,
+form input[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #bb86fc;
+  color: #121212;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background-color: #9a67e0;
+}
+
+form button:active,
+form input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Small helper text */
+form .helper-text {
+  font-size: 0.875rem;
+  color: #b0b0b0;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Ensure links are visible on dark background */
+a {
+  color: #bb86fc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,15 +1,47 @@
-embeddings:
+llm:
   provider: groq
   model: openai/gpt-oss-120b
+  judge_model: openai/gpt-oss-120b
+
+tasks:
+  db_path: .haard/tasks.db
+
+embeddings:
+  provider: openai
+  model: text-embedding-3-small
+  dims: 1536
+
+semantic_cache:
+  enabled: true
+  redis_url: redis://localhost:6379
+  threshold: 0.85
+  ttl: 86400
 
 chromadb:
-  persist_dir: .chromadb/
+  persist_dir: .haard/chromadb/
   collection_name: codebase
 
 elasticsearch:
   url: http://localhost:9200
   index_name: codebase
 
-llm:
-  provider: groq
-  model: openai/gpt-oss-120b
+vector_store:
+  provider: qdrant
+
+qdrant:
+  collection_name: codebase
+
+rag:
+  mode: hybrid # semantic | Hybrid
+
+vector_store:
+  provider: qdrant
+  retrieval_mode: hybrid # dense | sparse | 
+  
+memory:
+  db_path: .haard/memory/memory.db
+  summarize_at_tokens: 4000
+  keep_last_messages: 20
+
+skills:
+  skills_dir: .haard/skills

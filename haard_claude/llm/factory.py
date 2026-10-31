@@ -26,8 +26,8 @@ def get_llm():
 
 def get_embedder():
     """Return the right LangChain embedder based on config."""
-    provider = config["llm"]["provider"]
-    model = config["llm"]["model"]
+    provider = config["embeddings"]["provider"]
+    model = config["embeddings"]["model"]
     logger.info(f"Using LLM provider: {provider}: {model}")
     if provider == "huggingface":
         from langchain_huggingface import HuggingFaceEmbeddings
